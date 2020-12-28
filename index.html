@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>Рецепт</title>
+		<link href="conf.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="SC.js" defer="True"></script>	
+		<script type="text/javascript" src="newSC.js" defer="True"></script>
+	</head>
+	<body>
+	<div id="forscale">
+		<header>
+			<p><span>АППАРАТ:</span> <input list="mashine" class="in1" id="mashine1"> 
+				<input list="num_mashine" class="in4" id="OBEMselect" placeholder="№">
+				<datalist id="num_mashine"></datalist>
+					<!--<option value="№1">
+					<option value="№2">	
+					<option value="№3">
+					<option value="№4">
+					<option value="№5">
+					<option value="№6">
+					<option value="№7">
+					<option value="№8">
+					<option value="№9">
+					<option value="№10">			
+				
+				<select id="OBEMselect">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>-->
+			     <span>СПОХ:</span>
+			<input type="text" placeholder="0000000000/000" id="spoh"> 
+			<span>ДАТА</span> <input type="data" class="in1" id="head_date"></p>
+
+			<p>
+				<span class="ifnotPr">НОМЕР ПРЯЖИ:</span> <input type="text" class="in1 ifnotPr" list="num_pr" id="num_prg">
+				<span class="ifnotPr">ПРОГРАММА:</span> <input type="text" class="in1 ifnotPr" id="num_prgmm">
+				<span>ЦВЕТ:</span> <input type="text" placeholder="№" class="in2" id="numcolor">
+				<input type="text" placeholder="Название" id="namecolor">
+			</p>
+			
+
+			<p><span class="ifnotPr">КОЛ-ВО ФЛЕЙТ:</span> <input list="ifOBEM" class="in1 ifnotPr" id="listfl"><span>ВОДА:</span> 
+				<input type="number" class="in1" id="water" placeholder="л"> <span>ВЕС:</span> 
+				<input type="number" class="in1" placeholder="кг" id="Massa"></p><hr/>
+
+
+
+			<datalist id="mashine">
+				<option value="OBEM">
+				<option value="л-OBEM">	
+				<option value="AT291">
+				<option value="LAIP">
+				<option value="АКДС">
+				<option value="KFA-12">
+			</datalist>
+					<datalist id="ifOBEM"></datalist>
+					<datalist id="chCL"></datalist>
+					<datalist id="chCL2"></datalist>
+					<datalist id="num_pr">
+						<option value="40/1"><option value="40/2"><option value="40/1+1">
+						<option value="48/1"><option value="48/2"><option value="48/1+1">
+						<option value="56/1"><option value="56/2"><option value="56/1+1">
+						<option value="64/1"><option value="64/2"><option value="64/1+1">
+					</datalist>
+					<datalist id="ch2"><option value="%"><option value="г/л"><option value="г"></datalist>
+					
+		</header>	
+
+		
+		<section>
+				
+			<p class="chemy" id="chemy1" draggable="true">
+					<input type="number" class="in33 Chem_C ChemConc" name="">
+					<input type="text" class="in4 edinic" name="" list="ch2">
+					<input type="text" placeholder="ХИМИЯ" name="" class="noborder" list="chCL2">
+					<input type="number" name="" class="in6 Chem_M">
+
+					<input type="number" name="" class="in7 pChem_M">
+					<input type="number" name="" class="in7 pChem_M">
+					<input type="number" name="" class="in7 pChem_M">
+
+
+
+
+					<input type="text" value="г" class="in5">
+					<input type="button" name="" id="delthis" class="knopka" value="x">
+					<input type="button" name="" id="splitthis" class="knopka" value="/">
+					<input type="button" name="" id="copytthis2" class="knopka" value="↓">
+					
+			</p>
+			<p class="colorant" id="colorant1" draggable="true">
+					<input type="number" class="in33 Chem_C" name="">
+					<input type="text" class="in4 edinic" name="" list="ch2" value="%" disabled="True">
+					<input type="text" placeholder="КРАСИТЕЛЬ" class="noborder" list="chCL">
+					<input type="number" name="" class="in6 Chem_M">
+					<input type="text" value="г" class="in5">
+					<input type="button" id="delthis2" class="knopka" value="x">
+					<input type="button" id="copytthis" class="knopka" value="↓">
+				</p>
+		</section>
+		<article id="pole"></article>
+	</div>
+		<div id="allspis"></div>
+
+		<footer id="foot">
+			<hr/>
+			<table border="2" id="foot_tab">
+				<tr>
+					<td colspan="2" id="tab_left">
+						<input type="text" name="" id="sp_title" class = "sp_titlee" list="sp_list">
+						<datalist id="sp_list"><option value="ВЕДОМОСТЬ УЧЕТА ВЫРАБОТКИ УЧАСТКА КРАШЕНИЯ"><option value="ВЕДОМОСТЬ УЧЕТА ВЫРАБОТКИ КОЛОРИСТИЧЕСКОЙ ЛАБОТОРИИ"></datalist>						
+					</td>
+					<td id="tab_right"><input type="text" id="sp_date"></td>
+				</tr>
+				<tr>
+					<td class="col_1">
+						<table border="1" class="tab"><tbody id="tab1">
+								<tr><td colspan="2" class="stitle">СПОХ</td></tr>
+							</tbody></table>
+					</td>
+					<td class="col_2">
+						<table border="1" class="tab"><tbody id="tab2">
+							<tr><td colspan="2" class="stitle">КРАСИТЕЛИ</td></tr>
+						</tbody></table>
+					</td>
+					<td class="col_3">
+						<table border="1" class="tab"><tbody id="tab3">
+							<tr><td colspan="2" class="stitle">ХИМ.МАТЕРИАЛЫ</td></tr>
+						</tbody></table>
+					</td>
+					
+				</tr>
+			</table>
+			<p id="podp" class="podpiss"><span>___________</span><input type="text" value="Начальник участка крашения" class="podpis1" list="podpis" id="podps">
+			<datalist id="podpis"><option value="Начальник участка крашения"><option value="Колорист"></datalist></p>
+		</footer>
+		<aside>
+			<input type="button" value="+chem" id="Pl_s">
+			<input type="button" value="+colorant" id="PlC">
+			<input type="button" value="-del" id="DelLAst"> 
+			<input type="button" value="Ruco-stat" id="Rucostat"> <hr class="pols" />
+			<input type="text" placeholder="РЕЖИМ" id="regimeName">
+			<input type="number" placeholder="°C" class="in3" id="regimeTemp">
+			<input type="number" placeholder="мин" class="in3" id="regimeTime">
+			<input type="button" value="+regime" id="addreg"> <hr class="pols" />
+			<input type="checkbox" id="lab_spis">Лаб.
+			<input type="button" value="СПИСАНИЕ" name="" id="spis"> 
+			<input type="button" value="x" id="spisNV">
+			<input type="button" value="+" id="spisadd">
+			<input type="button" value="v" id="spisview">
+			<input type="button" value="alone" id="alone_spis">
+			<input type="button" value="РАССЧЕТ" id="ras4et">
+			<p>
+				<input type="button" value="▲" id="AllSpisUp"><input type="button" value="←→" id="ScaleUp"><input type="range" min="1" max="1.7" step="0.01" value="1" id="ScaleRoll"></input></br>
+				<input type="button" value="▼" id="AllSpisDown"><input type="button" value="→←" id="ScaleDown">
+			</p><hr class="pols" />
+			
+			<input type="button" value="save" id="save">
+			<input type="button" value="load" id="load1">
+			<input type="file" value="" id="load" accept=".json">
+		</aside>
+
+
+			
+	</body>
+</html>

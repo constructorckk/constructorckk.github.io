@@ -123,13 +123,13 @@ function V_Water() {
 			document.getElementById('water').value = 40;
 			break;
 		case "1/4":
-			document.getElementById('water').value = 35;
+			document.getElementById('water').value = 42;
 			break;
 		case "1/6":
 			document.getElementById('water').value = 18;
 			break;
 		case "5/12":
-			document.getElementById('water').value = 45;
+			document.getElementById('water').value = 38;
 			break;
 
 	}}

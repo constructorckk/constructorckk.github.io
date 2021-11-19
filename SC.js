@@ -407,7 +407,7 @@ function Spisenie() {
 		let tab2_row_2_dat_2_int = document.createElement('input');
 		tab2_row_2_dat_2_int.setAttribute('class','tabdata2');
 		if (colorants[i+1].getElementsByClassName('Chem_M')[0].value > 10) {
-		tab2_row_2_dat_2_int.value = (String((colorants[i+1].getElementsByClassName('Chem_M')[0].value * 1.05 / 1000).toFixed(2)) + ' кг');
+		tab2_row_2_dat_2_int.value = (String((colorants[i+1].getElementsByClassName('Chem_M')[0].value * 1.00 / 1000).toFixed(2)) + ' кг');
 		} else {	tab2_row_2_dat_2_int.value = '0.01 кг'} ;
 
 		
@@ -470,7 +470,7 @@ function Spisenie() {
 					console.log('0.3');
 					_nextName = 'Уксусная кислота'
 				}
-				tab2_row_2_dat_2_int.value = (String((cmemyy[i+1].getElementsByClassName('Chem_M')[0].value * 1.05 * for_30acid / 1000).toFixed(2)) + ' кг');
+				tab2_row_2_dat_2_int.value = (String((cmemyy[i+1].getElementsByClassName('Chem_M')[0].value * 1.00 * for_30acid / 1000).toFixed(2)) + ' кг');
 				tab2_row_2_dat.appendChild( document.createTextNode(_nextName));
 
 				Tab3.appendChild(tab2_row_2); tab2_row_2.appendChild(tab2_row_2_dat);

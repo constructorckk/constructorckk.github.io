@@ -571,7 +571,7 @@ function Ruco_stat() {
 	document.getElementById('pole').lastChild.getElementsByTagName('input')[0].value = 'ПРОМЫВКА 40°C 20\':';
 	plus();
 	let Class_for_stat = ['Chem_C', 'edinic', 'noborder'];
-	let Data_for_stat = ['2', '%', 'Руко-стат ASY NEW'];
+	let Data_for_stat = ['2', 'г/л', 'Сеталан Комфорт 200L'];
 	for (let i = 0; i < 3; i++){
 	document.getElementById('pole').lastChild.getElementsByClassName(Class_for_stat[i])[0].value = Data_for_stat[i]
 	}
